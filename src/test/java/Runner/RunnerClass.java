@@ -9,9 +9,9 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "features", 
 		glue = "glueCode",
-		monochrome = true,
-		tags = "@Sanity",
-		plugin = {"html:target/report.html" }
+//		monochrome = true,
+		tags = "@WebApp1",
+		plugin = {"json:target/json/report.json" }
 		)
 
 public class RunnerClass {
