@@ -1,5 +1,7 @@
 package glueCode;
 
+import org.joda.time.Seconds;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -9,6 +11,18 @@ import io.cucumber.java.en.Then;
 public class CommonStepDef {
 	
 	@Given("Open Application")
+	
+	@When("Wait for {int} seconds")
+	public void hardWait(int time) {
+		try {
+			Thread.sleep(time*1000);
+			System.out.println("Waiting for " + time + " Seconds");
+		} catch (InterruptedException e) {			
+			e.printStackTrace();
+		}
+	}
+	
+	
 	public void openApp() {
 		System.out.println("Opening Applicaiont..");
 	}
