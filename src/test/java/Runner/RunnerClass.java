@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = "features", 
 		glue = "glueCode",
 //		monochrome = true,
-		tags = "@WebApp1",
+		tags = "@Test1",
 		plugin = {"json:target/json/report.json" }
 		)
 
